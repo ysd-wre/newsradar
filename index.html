@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' blob:; media-src blob:; connect-src 'self'; manifest-src 'self'; worker-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<title>NewsRadar</title>
+<meta name="description" content="Private Nachrichten-App">
+<meta property="og:title" content="NewsRadar">
+<meta property="og:description" content="Private Nachrichten-App">
+<meta name="theme-color" content="#f1f3f4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#101315" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="NewsRadar">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="stylesheet" href="app.css">
+<script src="modus.js"></script>
+</head>
+<body>
+<header>
+  <div class="kopf">
+    <a class="marke" href="#"><span class="balken" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>NewsRadar</a>
+    <label class="suche"><span class="nurvorlesen">Meldungen durchsuchen</span><input id="suche" type="search" placeholder="Suchen" autocomplete="off"></label>
+    <button id="umschalten" class="rund" type="button" aria-label="Zwischen hell und dunkel wechseln" title="Hell oder dunkel"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="mond" d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/><g class="sonne"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M5 19l2-2M17 7l2-2"/></g></svg></button>
+  </div>
+  <nav id="ressorts" aria-label="Ressorts"></nav>
+</header>
+<aside id="appleiste" class="nuroffen" hidden>
+  <p><b>NewsRadar als App</b><span>Kostenlos auf Handy und Computer</span></p>
+  <button id="installieren" class="knopf voll laden" type="button">App herunterladen</button>
+  <button id="kastenzu" class="rund" type="button" aria-label="Hinweis schließen">×</button>
+</aside>
+<main id="inhalt" tabindex="-1"><p class="leer">Meldungen werden geladen …</p></main>
+<footer>
+  <p id="stand" role="status"></p>
+  <p class="nuroffen">Die Meldungen schreibt eine KI aus Schlagzeilen mehrerer Medien. Sie können Fehler enthalten.</p>
+  <button id="installieren2" class="knopf nuroffen" type="button" hidden>App herunterladen</button>
+  <button id="abmelden" class="knopf nuroffen" type="button">Abmelden</button>
+</footer>
+<dialog id="anleitung" aria-labelledby="anleitungtitel"></dialog>
+<script src="app.js"></script>
+</body>
+</html>
